@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;700&display=swap");
-.navbar, .submain__banner {
+.navbar, .submain__banner, .submain__items {
   margin: 0 auto;
   max-width: 1150px;
 }
@@ -31,7 +31,7 @@
 body {
   font-size: 18px;
   font-family: "Public Sans", sans-serif;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 .navbar {
@@ -119,6 +119,51 @@ body {
 .submain__banner .banner__paragraph {
   font-size: 16px;
   margin-bottom: 30px;
+  color: #9698a6;
+}
+
+.main__items {
+  background-color: #f3f4f6;
+  padding-top: 60px;
+}
+
+.submain__items {
+  padding: 150px 0;
+}
+
+.submain__items .items__heading {
+  font-weight: 300;
+}
+
+.submain__items .items__paragraph {
+  margin: 30px 0;
+  font-size: 16px;
+  color: #9698a6;
+}
+
+.items__card {
+  margin-top: 90px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 4px;
+}
+
+.items__card .item__card {
+  -ms-flex-preferred-size: 260px;
+      flex-basis: 260px;
+}
+
+.item__description .description__heading {
+  padding: 20px 0;
+  font-weight: 300;
+}
+
+.item__description .description__paragraph {
+  font-size: 15px;
   color: #9698a6;
 }
 /*# sourceMappingURL=estilos.css.map */

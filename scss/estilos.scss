@@ -9,7 +9,7 @@ body {
   font-size: $size;
   font-family: $fuente;
   //imagen del celular del lado derecho se corte, para no abarcar mas ancho
-  overflow: hidden;
+  overflow-x: hidden;
 }
 .navbar {
   display: flex;
@@ -67,9 +67,9 @@ body {
   }
 }
 .submain__banner {
-    margin: auto;
-    align-self: center;
-    width:30%;
+  margin: auto;
+  align-self: center;
+  width: 30%;
   @extend %margenes;
   .banner__heading {
     font-size: 42px;
@@ -87,5 +87,41 @@ body {
     &:hover {
       @extend %botones--hover;
     }
+  }
+}
+// MAIN ITEMS
+.main__items {
+  background-color: $light-grayish-blue;
+  padding-top: 60px;
+}
+.submain__items {
+  @extend %margenes;
+  padding: 150px 0;
+  .items__heading {
+    font-weight: 300;
+  }
+  .items__paragraph {
+    margin: 30px 0;
+    font-size: 16px;
+    color: $grayish-blue;
+  }
+}
+.items__card {
+  margin-top: 90px;
+  display: flex;
+  justify-content: space-between;
+  gap:4px;
+.item__card {
+  flex-basis: 260px; 
+}
+}
+.item__description{
+     .description__heading {
+    padding: 20px 0;
+    font-weight: 300;
+  }
+  .description__paragraph {
+    font-size: 15px;
+    color: $grayish-blue;
   }
 }
