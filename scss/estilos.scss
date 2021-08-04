@@ -8,13 +8,19 @@
 body {
   font-size: $size;
   font-family: $fuente;
+  //imagen del celular del lado derecho se corte, para no abarcar mas ancho
+  overflow: hidden;
 }
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background-color: #fff;
   @extend %margenes;
-  padding:30px 0;
+  padding: 30px 0;
+  //Imagen de celulares este detras del header
+  position: relative;
+  z-index: 10;
 }
 .navbar__menu {
   display: flex;
@@ -26,16 +32,60 @@ body {
   }
   .navbar__link {
     text-decoration: none;
-    color:$grayish-blue;
+    color: $grayish-blue;
     font-family: $fuente;
-    font-size:15px;
+    font-size: 15px;
   }
 }
-.navbar__button{
-    .navbar__btn{
-        @extend %botones;
-        &:hover{
-            @extend %botones--hover;
-        }
+.navbar__button {
+  .navbar__btn {
+    @extend %botones;
+    &:hover {
+      @extend %botones--hover;
     }
+  }
+}
+//MAIN BANNER
+.main__banner {
+  position: relative;
+  background-color: $very-light-gray;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  .banner__picture {
+    background-image: url(../img/bg-intro-desktop.svg);
+    background-repeat: no-repeat;
+    background-position: center left;
+    background-size: 1290px;
+    height: 80vh;
+    width: 57%;
+  }
+  .banner__img {
+    position: absolute;
+    right: -10%;
+    top: -24%;
+  }
+}
+.submain__banner {
+    margin: auto;
+    align-self: center;
+    width:30%;
+  @extend %margenes;
+  .banner__heading {
+    font-size: 42px;
+    padding-right: 20px;
+    font-weight: 300;
+    margin-bottom: 20px;
+  }
+  .banner__paragraph {
+    font-size: 16px;
+    margin-bottom: 30px;
+    color: $grayish-blue;
+  }
+  .banner__btn {
+    @extend %botones;
+    &:hover {
+      @extend %botones--hover;
+    }
+  }
 }
