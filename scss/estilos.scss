@@ -17,7 +17,7 @@ body {
   align-items: center;
   background-color: #fff;
   @extend %margenes;
-  padding: 30px 0;
+  padding: 30px 8px;
   //Imagen de celulares este detras del header
   position: relative;
   z-index: 10;
@@ -44,7 +44,7 @@ body {
 }
 .navbar__img {
   fill: #2d314d;
-  transition:640ms;
+  transition: 640ms;
   &:hover {
     fill: $lime-green;
     cursor: pointer;
@@ -65,6 +65,8 @@ body {
   width: 100%;
   display: flex;
   justify-content: space-between;
+  padding: 0 8px;
+
   .banner__picture {
     background-image: url(../img/bg-intro-desktop.svg);
     background-repeat: no-repeat;
@@ -105,11 +107,15 @@ body {
 // MAIN ITEMS
 .main__items {
   background-color: $light-grayish-blue;
+  padding: 0 8px;
   padding-top: 60px;
 }
 .submain__items {
   @extend %margenes;
   padding: 150px 0 100px;
+    @media screen and (max-width:1000px){
+      text-align: center;
+  }
   .items__heading {
     font-weight: 300;
   }
@@ -124,6 +130,12 @@ body {
   display: flex;
   justify-content: space-between;
   gap: 4px;
+  @media screen and (max-width: 1000px) {
+    text-align: center;
+    gap: 50px;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+  }
   .item__card {
     flex-basis: 260px;
   }
@@ -141,7 +153,10 @@ body {
 //MAIN ARTICLE
 .main__article {
   background-color: $very-light-gray;
-  padding: 80px 0 40px;
+  padding: 80px 8px 40px;
+  @media screen and (max-width: 1000px) {
+    text-align: center;
+  }
   .article__heading {
     @extend %margenes;
     font-weight: 500;
@@ -153,6 +168,10 @@ body {
   display: flex;
   justify-content: space-between;
   gap: 30px;
+  @media screen and (max-width: 1000px) {
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
 }
 .box__article {
   flex-basis: 300px;
@@ -187,11 +206,19 @@ body {
 //MAIN FOOTER
 .main__footer {
   background-color: $dark-blue;
+  padding: 0 8px;
   .submain__footer {
     @extend %margenes;
     padding: 50px 0;
     display: flex;
     justify-content: space-between;
+
+      @media screen and (max-width:1000px){
+      flex-wrap:wrap;
+      justify-content: space-evenly;
+      gap: 50px;
+      text-align: center;
+  }
   }
 }
 .footer__box:nth-of-type(1) {
@@ -199,6 +226,9 @@ body {
   flex-direction: column;
   justify-content: space-between;
   flex-basis: 200px;
+    @media screen and (max-width:565px){
+     gap: 40px;
+  }
   .footer__picture {
     text-align: center;
   }
@@ -218,6 +248,9 @@ body {
   display: flex;
   justify-content: space-between;
   flex-basis: 300px;
+    @media screen and (max-width:375px){
+     flex-direction: column;
+  }
 }
 .footer__box:nth-of-type(3) {
   display: flex;
@@ -227,6 +260,9 @@ body {
   flex-basis: 400px;
   .footer__credits {
     padding: 8px 0 0;
+      @media screen and (max-width:375px){
+      padding:20px 0 0;
+  }
   }
   .footer__paragraph {
     color: $white;
