@@ -1,0 +1,47 @@
+@import url("https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;700&display=swap");
+
+//Colores
+
+//Primary
+$dark-blue: #2d314d;
+$lime-green: #31d35c;
+$bright-cyan: #2bb7da;
+
+//hover
+$lime-green-hover: #31d35cc9;
+$bright-cyan-hover: #2bb7da98;
+
+//Neutral
+$grayish-blue: #9698a6;
+$light-grayish-blue: #f3f4f6;
+$very-light-gray: #fafafa;
+$white: #ffffff;
+
+//Tipografia
+$size: 18px;
+$fuente: "Public Sans", sans-serif;
+
+%margenes {
+  margin: 0 auto;
+  max-width: 1150px;
+}
+%botones {
+  border: none;
+  width: 160px;
+  height: 46px;
+  border-radius: 32px;
+  background-image: linear-gradient(100deg, $lime-green, $bright-cyan);
+  color: $white;
+  font-family: $fuente;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+%botones--hover {
+  background-image: linear-gradient(
+    100deg,
+    $lime-green-hover,
+    $bright-cyan-hover
+  );
+  cursor: pointer;
+}

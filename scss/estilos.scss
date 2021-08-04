@@ -1,0 +1,41 @@
+@import "configuracion";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: $size;
+  font-family: $fuente;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  @extend %margenes;
+  padding:30px 0;
+}
+.navbar__menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+  .navbar__list {
+    list-style: none;
+  }
+  .navbar__link {
+    text-decoration: none;
+    color:$grayish-blue;
+    font-family: $fuente;
+    font-size:15px;
+  }
+}
+.navbar__button{
+    .navbar__btn{
+        @extend %botones;
+        &:hover{
+            @extend %botones--hover;
+        }
+    }
+}
