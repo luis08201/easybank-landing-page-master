@@ -72,6 +72,23 @@ body {
   color: #9698a6;
   font-family: "Public Sans", sans-serif;
   font-size: 15px;
+  padding: 40px 0;
+}
+
+.navbar__menu .navbar__link:hover {
+  cursor: pointer;
+  border-bottom: 3px solid #31d35c;
+}
+
+.navbar__img {
+  fill: #2d314d;
+  -webkit-transition: 640ms;
+  transition: 640ms;
+}
+
+.navbar__img:hover {
+  fill: #31d35c;
+  cursor: pointer;
 }
 
 .main__banner {

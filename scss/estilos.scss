@@ -35,6 +35,19 @@ body {
     color: $grayish-blue;
     font-family: $fuente;
     font-size: 15px;
+    padding: 40px 0;
+    &:hover {
+      cursor: pointer;
+      border-bottom: 3px solid $lime-green;
+    }
+  }
+}
+.navbar__img {
+  fill: #2d314d;
+  transition:640ms;
+  &:hover {
+    fill: $lime-green;
+    cursor: pointer;
   }
 }
 .navbar__button {
@@ -186,19 +199,19 @@ body {
   flex-direction: column;
   justify-content: space-between;
   flex-basis: 200px;
-  .footer__picture{
-      text-align: center;
+  .footer__picture {
+    text-align: center;
   }
-  .footer__socialnetwork{
-      display:flex;
-      justify-content: space-evenly;
+  .footer__socialnetwork {
+    display: flex;
+    justify-content: space-evenly;
   }
-  .footer__ico{
-      transition:640ms;
-      fill: $white;
-      &:hover{
-          fill: $lime-green;
-      }
+  .footer__ico {
+    transition: 640ms;
+    fill: $white;
+    &:hover {
+      fill: $lime-green;
+    }
   }
 }
 .footer__box:nth-of-type(2) {
@@ -221,10 +234,10 @@ body {
   }
   .frontend__link {
     text-decoration: none;
-    color: $white;   
-    transition:640ms;
-     &:hover{
-        color:$lime-green;
+    color: $white;
+    transition: 640ms;
+    &:hover {
+      color: $lime-green;
     }
   }
   .footer__btn {
@@ -243,9 +256,9 @@ body {
   .footer__cta {
     color: $white;
     text-decoration: none;
-    transition:640ms;
-     &:hover{
-        color:$lime-green;
+    transition: 640ms;
+    &:hover {
+      color: $lime-green;
     }
   }
 }
