@@ -10,10 +10,12 @@ body {
   font-family: $fuente;
   //imagen del celular del lado derecho se corte, para no abarcar mas ancho
   overflow-x: hidden;
-  background-color: rgb(7, 7, 70);
 }
 .main__header {
   background-color: $white;
+  position: relative;
+
+  z-index: 4;
 }
 //HEADER
 .navbar {
@@ -23,7 +25,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  @media screen and (max-width:768px){
+  @media screen and (max-width: 768px) {
     padding: 20px 10px 10px;
   }
 }
@@ -37,14 +39,6 @@ body {
 .navbar__menu {
   display: flex;
   gap: 40px;
-  .navbar__list {
-    list-style: none;
-  }
-  .navbar__link {
-    text-decoration: none;
-    color: $grayish-blue;
-    font-size: 16px;
-  }
   @media screen and (max-width: 768px) {
     margin: 40px auto 0;
     height: 28vh;
@@ -53,6 +47,7 @@ body {
     justify-content: center;
     gap: 20px;
     position: absolute;
+    z-index: 20;
     background-color: #fff;
     text-align: center;
     top: 80%;
@@ -62,6 +57,24 @@ body {
     display: none;
     &.active {
       display: flex;
+    }
+  }
+  .navbar__list {
+    list-style: none;
+  }
+  .navbar__link {
+    text-decoration: none;
+    color: $grayish-blue;
+    font-size: 16px;
+    @media screen and (max-width: 768px) {
+      color: $dark-blue;
+    }
+    &:hover {
+      border-bottom: 4px solid $lime-green-hover;
+      padding-bottom: 23px;
+      @media screen and (max-width: 768px) {
+        padding-bottom: 3px;
+      }
     }
   }
 }
@@ -94,6 +107,127 @@ body {
     }
   }
 }
+//MAIN HEADER
+.main__banner {
+  position: relative;
+  .banner__phone {
+    z-index: 2;
+    top: -19%;
+    right: -8%;
+    left: 0;
+    position: absolute;
+    margin: 0 0 0 auto;
+    @media screen and (max-width: 768px) {
+      right: 0;
+      margin: auto;
+      width: 85%;
+    }
+    @media screen and (max-width: 768px) {
+      top: -9%;
+      width: 65%;
+    }
+    @media screen and (max-width: 768px) {
+      top: -19%;
+    }
+    @media screen and (max-width: 375px) {
+      top: -9%;
+      width: 75%;
+    }
+    @media screen and (max-width: 360px) {
+      width: 65%;
+      top: -13%;
+    }
+    @media screen and (max-width: 280px) {
+      width: 70%;
+      top: -7%;
+    }
+  }
+}
+.submain__banner {
+  background-color: $very-light-gray;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
+  height: 80vh;
+
+  @media screen and (max-width: 768px) {
+    flex-direction: column-reverse;
+    height: 80vh;
+    padding-bottom: 20px;
+  }
+}
+.banner__article {
+  margin: 0 20px 0 auto;
+  padding: 0 8px;
+  max-width: 450px;
+  @media screen and (max-width: 768px) {
+    margin: 0 auto;
+    max-width: 750px;
+    text-align: center;
+  }
+  @media screen and (max-width: 600px) {
+    max-width: 400px;
+    padding: 9px 0;
+  }
+  @media screen and (max-width: 375px) {
+    margin: 0 auto 40px;
+    max-width: 350px;
+  }
+  .banner__heading {
+    font-size: 43px;
+    font-weight: 500;
+    margin-bottom: 20px;
+    @media screen and (max-width: 375px) {
+      font-size: 32px;
+    }
+  }
+  .banner__paragraph {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: $grayish-blue;
+    @media screen and (max-width: 375px) {
+      font-size: 15px;
+    }
+  }
+  .banner__btn {
+    @extend %botones;
+    &:hover {
+      @extend %botones--hover;
+    }
+  }
+}
+.banner__picture {
+  width: 60%;
+  @media screen and (max-width: 768px) {
+    width: 100%;
+  }
+  @media screen and (max-width: 600px) {
+    background-image: url(../img/bg-intro-desktop.svg);
+    background-repeat: no-repeat;
+    background-position: center left;
+    width: 100%;
+    height: 50vh;
+  }
+  @media screen and (max-width: 425px) {
+    margin-bottom: 40px;
+  }
+  @media screen and (max-width: 375px) {
+    background-image: url(../img/bg-intro-mobile.svg);
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 50vh;
+    margin-bottom: 10px;
+  }
+  .banner__img {
+    object-fit: cover;
+    object-position: center;
+    @media screen and (max-width: 600px) {
+      display: none;
+    }
+  }
+}
 
 // MAIN ITEMS
 .main__items {
@@ -110,8 +244,8 @@ body {
   @media screen and (max-width: 1000px) {
     text-align: center;
   }
-  @media screen and (max-width: 375px) {
-    padding: 50px 19px 10px;
+  @media screen and (max-width: 768px) {
+    padding: 30px 19px 30px;
   }
   .items__heading {
     font-weight: 300;
@@ -168,7 +302,8 @@ body {
   display: flex;
   justify-content: space-between;
   gap: 30px;
-  @media screen and (max-width: 1000px) {
+  @media screen and (max-width: 1280px) {
+    gap:40px;
     flex-wrap: wrap;
     justify-content: space-evenly;
   }
