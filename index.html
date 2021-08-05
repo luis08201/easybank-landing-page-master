@@ -12,7 +12,7 @@
     <header class="main__header">
         <nav class="navbar">
             <figure class="navbar__logo">
-                <svg xmlns="http://www.w3.org/2000/svg" width="139" height="20">
+                <svg xmlns="http://www.w3.org/2000/svg" class="nav__img" width="139" height="15">
                     <defs>
                         <linearGradient id="a" x1="72.195%" x2="17.503%" y1="0%" y2="100%">
                             <stop offset="0%" stop-color="#33D35E" />
@@ -50,9 +50,10 @@
             <div class="navbar__button">
                 <button class="navbar__btn">Request Invite</button>
             </div>
+            <div class="menuToggle" onclick="menuToggle();"></div>
         </nav>
     </header>
-    <main class="main__page">
+  <!--   <main class="main__page">
         <section class="main__banner">
             <div class="submain__banner">
                 <div class="banner__article">
@@ -308,6 +309,14 @@
                 </div>
             </div>
         </div>
-    </footer>
+    </footer> -->
+  <script>
+      function menuToggle() {
+            const toggleMenu = document.querySelector('.menuToggle');
+            toggleMenu.classList.toggle('active');
+            const navbar__menu = document.querySelector('.navbar__menu');
+            navbar__menu.classList.toggle('active');
+        }
+  </script>
 </body>
 </html>
