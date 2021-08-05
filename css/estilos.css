@@ -177,46 +177,25 @@ body {
 
 @media screen and (max-width: 1060px) {
   .main__banner .banner__phone {
-    top: -22%;
+    width: 100%;
+    height: 100%;
+    left: 0;
     right: 0;
-    margin: auto;
-    width: 50%;
-  }
-}
-
-@media screen and (max-width: 840px) {
-  .main__banner .banner__phone {
-    top: -22%;
-    right: 0;
-    margin: auto;
-    width: 60%;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .main__banner .banner__phone {
-    top: -9%;
-    width: 55%;
+    max-width: 900px;
+    margin: 0 auto;
   }
 }
 
 @media screen and (max-width: 600px) {
   .main__banner .banner__phone {
-    top: -17%;
-    width: 65%;
+    height: 90%;
   }
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 600px) {
   .main__banner .banner__phone {
-    top: -14%;
-    width: 90%;
-  }
-}
-
-@media screen and (max-width: 300px) {
-  .main__banner .banner__phone {
-    top: 0;
+    height: 70%;
+    margin: 40px auto 0;
   }
 }
 
@@ -242,7 +221,7 @@ body {
     -webkit-box-direction: reverse;
         -ms-flex-direction: column-reverse;
             flex-direction: column-reverse;
-    height: 80vh;
+    height: 100%;
     padding-bottom: 20px;
   }
 }
