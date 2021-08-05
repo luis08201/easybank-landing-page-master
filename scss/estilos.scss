@@ -112,34 +112,37 @@ body {
   position: relative;
   .banner__phone {
     z-index: 2;
-    top: -19%;
+    top: -25%;
     right: -8%;
     left: 0;
     position: absolute;
     margin: 0 0 0 auto;
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 1060px) {
+      top: -22%;
       right: 0;
       margin: auto;
-      width: 85%;
+      width: 50%;
+    }
+       @media screen and (max-width: 840px) {
+      top: -22%;
+      right: 0;
+      margin: auto;
+      width: 60%;
     }
     @media screen and (max-width: 768px) {
       top: -9%;
+      width: 55%;
+    }
+    @media screen and (max-width: 600px) {
+      top: -17%;
       width: 65%;
     }
-    @media screen and (max-width: 768px) {
-      top: -19%;
+    @media screen and (max-width: 400px) {
+       top: -14%;
+       width: 90%;
     }
-    @media screen and (max-width: 375px) {
-      top: -9%;
-      width: 75%;
-    }
-    @media screen and (max-width: 360px) {
-      width: 65%;
-      top: -13%;
-    }
-    @media screen and (max-width: 280px) {
-      width: 70%;
-      top: -7%;
+    @media screen and (max-width: 300px) {
+      top: 0;
     }
   }
 }
@@ -152,7 +155,7 @@ body {
   overflow: hidden;
   height: 80vh;
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 1060px) {
     flex-direction: column-reverse;
     height: 80vh;
     padding-bottom: 20px;
@@ -162,7 +165,7 @@ body {
   margin: 0 20px 0 auto;
   padding: 0 8px;
   max-width: 450px;
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 1060px) {
     margin: 0 auto;
     max-width: 750px;
     text-align: center;
