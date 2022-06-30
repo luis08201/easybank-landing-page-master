@@ -1,0 +1,37 @@
+*,
+*::before,
+*::after{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    text-decoration: none;
+        list-style: none;
+}
+
+:root{
+    --gradiente:linear-gradient(135deg, rgba(51, 211, 94, 1) 11%, rgba(42, 182, 217, 1) 100%);
+    --green:#30C88F;
+    --dark-blue:#2D314D;
+    --gray:#9597A5;
+    --white:#fff;
+}
+
+html{
+    font-size: 16px;
+}
+
+body{
+    font-family: 'Public Sans', sans-serif;
+    font-size: 1rem;    
+    overflow-x: hidden;
+}
+
+h1,h2,h3,h4,h5,h6{
+    color:var(--dark-blue);
+    text-transform: capitalize;
+    font-weight: 300;
+}
+
+p{
+    color:var(--gray);
+}
